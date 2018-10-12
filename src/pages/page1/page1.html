@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Perfil</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Lo que estas ingresando
+        </ion-card-header>
+        <ion-card-content>
+            <ion-badge item-right>Nombre</ion-badge> {{ user.name }}
+            <br><br>
+            <ion-badge item-right>Edad</ion-badge> {{ user.age }}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-list>
+        <ion-item>
+            <ion-label fixed>Nombre</ion-label>
+            <ion-input type="text" [(ngModel)]="user.name">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label fixed>Contraseña</ion-label>
+            <ion-input type="number" [(ngModel)]="user.age">
+            </ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full block (click)="goToPage2()">Ir a la página 2</button>
+</ion-content>
